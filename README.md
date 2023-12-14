@@ -14,8 +14,8 @@ combination-simulation-seven-days.ipynb: Full week simulation with carbon tax an
 
 ### Formulation 
 
-Baseline Policy Scenario
-〖〖Generator Cost〗_d= min〗⁡∑_t▒[∑_i▒〖〖(QC〗_i g_(i,t)^2+〖LC〗_i g_(i,t)+〖NLC〗_i u_(i,t)+〖SUC〗_i v_(i,t))〗+9000s_t ] 
+Baseline Policy Scenario  
+$Gen. Cost_d = min⁡∑_t[∑_i[(QC_i g_{i,t}^2+LC_i g_{i,t} +NLC_i u_{i,t}+SUC_i v_{i,t})+9000s_t]  
 
 Carbon Tax Policy Scenario
 〖〖Generator Cost〗_d= min〗⁡∑_t▒[∑_i▒〖〖(QC〗_i g_(i,t)^2+〖(LC〗_i+〖EF〗_i)g_(i,t)+〖NLC〗_i u_(i,t)+〖SUC〗_i v_(i,t))〗+9000s_t ] 
