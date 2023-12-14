@@ -114,10 +114,10 @@ The carbon tax does not come as a recommended policy. So far, the carbon tax has
 *See submitted report for Project Presentation slides*
 
 ## Appendix B: Additional Excel Plots
-![image](./images/figureB-1.png) 
+![image](./images/figureb-1.png) 
 *Figure B-1: Average electricity price grouped by wind integration over all policy scenarios.*
 
-![image](./images/figureB-2.png) 
+![image](./images/figureb-2.png) 
 *Figure B-2: Hourly marginal price over all wind integration and policy scenarios.*
 
 Figure B-2 allows for the observation of outliers in this dataset. Abnormal price spikes reaching thousands of dollars per MWh skew the overall price of electricity for each scenario significantly higher.  
