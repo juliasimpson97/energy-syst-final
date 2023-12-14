@@ -33,33 +33,12 @@ Total Profit
 $Profit = ∑_{t=1}^{168}(λ_t D_t)- ∑_{d=1}^7Gen.Cost_d$
 
 ###	Results    
-3.1	Generation and Demand Profile over a Week
- 
- 
+####	Generation and Demand Profile over a Week
+![image](./images/gendemand.png) 
+![image](./images/winddemand.png) 
 Figures 1-2: Demand, Generation, and Wind Profile over a week.
 Given the wind curtailment ratio is 0 over all scenarios, variation only occurs over wind capacity.
 
-Scenario	Wind Capacity
-[MW]	Approach	Total Generation Cost
- [$million]	Profits 
-[$million]	Average Electricity Price 
-[$/MWh]
-1	2000	Baseline	68.77	368.5	176.53
-2	2000	Carbon Tax	91.22	344.61	166.79
-3	2000	Wind Tax Incentives	66.47	381.28	180.30
-4	2000	Combination	88.92	350.86	169.01
-5	6000	Baseline	60.96	254.41	130.23
-6	6000	Carbon Tax	81.47	244.82	138.44
-7	6000	Wind Tax Incentives	53.99	235.23	119.18
-8	6000	Combination	74.61	287.79	153.76
-9	12000	Baseline	54.03	633.26	274.18
-10	12000	Carbon Tax	67.04	736.52	340.61
-11	12000	Wind Tax Incentives	40.20	624.26	264.66
-12	12000	Combination	53.23	709.92	322.46
-3.2	Total Generation Cost over Wind Integration Scenarios
-
- 
-Figure 3
 
 3.3	Total Profit over Wind Integration Scenarios
  
