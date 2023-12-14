@@ -18,7 +18,7 @@ The decarbonization of ISO New England is critical to the climate goals of the s
 
 A simplified model of ISO New England$^1$ is used to evaluate wind integration, electricity prices, and generator profits across various policy scenarios. This testbed for ISO New England generation is partitioned into nuclear, coal, petroleum, and natural gas generation. Three levels of wind capacity are evaluated¬–2,000 megawatts (MW), 6,000 MW, and 12,000 MW–to characterize the effectiveness of the potential policies at varying stages of wind integration. Analysis centers on two policy options: a carbon tax and a wind production tax incentive. A baseline scenario is also included to facilitate comparison, along with a fourth scenario that combines the carbon tax and wind tax incentive policies.
 
-A carbon tax policy sets a price on carbon dioxide equivalent emissions; this price is then scaled for nuclear, coal, petroleum, and natural gas generation sources based on the respective emission factors. No emission factor is applied for clean wind generation–note that calculations also assume clean nuclear generation. This analysis assumes a base price of $\$$25 per metric ton of carbon dioxide equivalent emissions, a value that was deemed both politically feasible and physically meaningful based on its inclusion in a Congressional Budget Office working paper.$^2$ Generation types are identified using fuel codes and emission factors are estimated using data from the United States Energy Information Administration.$^{3,4,5}$ It was determined that coal emitted $2.30 lbs./kWh$, petroleum emitted $2.38 lbs./kWh$, and natural gas emitted $0.97 lbs./kWh$. These constants define $E_{Fuel Type}$ for each fuel type in the carbon tax equation in Section 2.2. 
+A carbon tax policy sets a price on carbon dioxide equivalent emissions; this price is then scaled for nuclear, coal, petroleum, and natural gas generation sources based on the respective emission factors. No emission factor is applied for clean wind generation–note that calculations also assume clean nuclear generation. This analysis assumes a base price of $\$25$ per metric ton of carbon dioxide equivalent emissions, a value that was deemed both politically feasible and physically meaningful based on its inclusion in a Congressional Budget Office working paper.$^2$ Generation types are identified using fuel codes and emission factors are estimated using data from the United States Energy Information Administration.$^{3,4,5}$ It was determined that coal emitted $2.30 lbs./kWh$, petroleum emitted $2.38 lbs./kWh$, and natural gas emitted $0.97 lbs./kWh$. These constants define $E_{Fuel Type}$ for each fuel type in the carbon tax equation in Section 2.2. 
 
 An alternative policy is to implement wind tax incentives. Under the Inflation Reduction Act, wind projects over 1 MW are eligible for a full production tax credit amount of 2.6 cents per kilowatt-hour (kWh).5 All wind integration scenarios (2,000MW; 6,000 MW; 12,000 MW) are well over 1MW, thus this analysis assumes that all generators will be individually large enough to qualify for this threshold. It is also assumed that generators satisfy all other specifications, for example apprenticeship and prevailing wage requirements, in order to be eligible for the full production tax credit of 2.6 cents per kWh. Note that the legislation allows for either a production tax credit or an investment tax credit of 30%–since this analysis examines policy impacts on generation costs, not investment costs, it is premised on the assumption that generators will take advantage of the production as opposed to the investment tax credit. 
 
@@ -36,17 +36,21 @@ $$ Generation Cost_{day} = min \sum\limits_{t} \sum\limits_{i} (QC_ig_{i,t}^2 +L
 
 #### 2.2 Carbon Tax Policy Scenario Equations
 The carbon tax scenario requires the following modification, shown in yellow, to the baseline objective function. The $EF$ term accounts for the price of carbon emissions as determined by the emission factor of the respective generation source, as outlined in the Background section of this report. 
+
 $$ Generation Cost_{day} = min \sum\limits_{t} \sum\limits_{i} (QC_ig_{i,t}^2 +(LC_i+EF_i)g_{i,t} + NLC_iu_{i,t} +SUC_iv_{i,t}) + (9000)s_t $$
 
+Tax scaled by emission factor (EF):
 
-$$ Tax Scaled by Emission Factor (EF): E_{fuel type} = EF[\frac{pounds}{kWh}] * 1000[\frac{kWh}{MWh}] * \frac{1}{2205}[\frac{Mton}{pounds}] * 25[\frac{\$}{Mton}] = \frac{\$}{MWh}, over 1 hr generation = \frac{\$}{MW}$$
+$$  E_{fuel type} = EF[\frac{pounds}{kWh}] * 1000[\frac{kWh}{MWh}] * \frac{1}{2205}[\frac{Mton}{pounds}] * 25[\frac{\$}{Mton}] = \frac{\$}{MWh}, over 1 hr generation = \frac{\$}{MW}$$
 
 #### 2.3 Wind Tax Incentive Policy Scenario Equation
 The wind tax incentive scenario requires the following modification, shown in orange, to the baseline objective function. The $26w_t$ term accounts for the tax credit for wind production, which is 26 cents per kWh or $\$$26/MW. Further detail on this calculation is provided in the relevant simulation notebook.
+
 $$Generation Cost_{day} = min \sum\limits_{t} \sum\limits_{i} (QC_ig_{i,t}^2 +LC_ig_{i,t} + NLC_iu_{i,t} +SUC_iv_{i,t}) + (9000)s_t - (26)w_t$$
 
 #### 2.4 Combination Policy Scenario Equation
 The combination policy scenario models both the carbon tax and wind tax incentive modifications.
+
 $$ Generation Cost_{day} = min \sum\limits_{t} \sum\limits_{i} (QC_ig_{i,t}^2 +(LC_i+EF_i)g_{i,t} + NLC_iu_{i,t} +SUC_iv_{i,t}) + (9000)s_t - (26)w_t$$
 
 #### 2.5 Generator Revenue Equation
