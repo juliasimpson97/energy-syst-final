@@ -15,20 +15,20 @@ combination-simulation-seven-days.ipynb: Full week simulation with carbon tax an
 ### Formulation 
 
 Baseline Policy Scenario  
-$Gen. Cost_d  = min⁡∑_t[∑_i[(QC_i g_{i,t}^2+LC_i g_{i,t} +NLC_i u_{i,t}+SUC_i v_{i,t})+9000s_t]$ 
+$Gen. Cost_d  = min⁡∑_t[∑_i(QC_i g_{i,t}^2+LC_i g_{i,t} +NLC_i u_{i,t}+SUC_i v_{i,t})+9000s_t]$ 
 
-Carbon Tax Policy Scenario
-〖〖Generator Cost〗_d= min〗⁡∑_t▒[∑_i▒〖〖(QC〗_i g_(i,t)^2+〖(LC〗_i+〖EF〗_i)g_(i,t)+〖NLC〗_i u_(i,t)+〖SUC〗_i v_(i,t))〗+9000s_t ] 
+Carbon Tax Policy Scenario  
+$Gen. Cost_d  = min⁡∑_t[∑_i(QC_i g_{i,t}^2+(LC_i + EF_i)g_{i,t} +NLC_i u_{i,t}+SUC_i v_{i,t})+9000s_t]$ 
 
 Wind Tax Incentive Policy Scenario
-〖Generator Cost〗_d=  min⁡∑_t▒[∑_i▒〖〖(QC〗_i g_(i,t)^2+〖LC〗_i g_(i,t)+〖NLC〗_i u_(i,t)+〖SUC〗_i v_(i,t))〗+9000s_t-26w_t ] 
+$Gen. Cost_d  = min⁡∑_t[∑_i(QC_i g_{i,t}^2+LC_ig_{i,t} +NLC_i u_{i,t}+SUC_i v_{i,t})+9000s_t - 26w_t]$ 
 
 Combination Policy Scenario
-〖〖Generator Cost〗_d= min〗⁡∑_t▒[∑_i▒〖〖(QC〗_i g_(i,t)^2+(〖LC〗_i+〖EF〗_i)g_(i,t)+〖NLC〗_i u_(i,t)+〖SUC〗_i v_(i,t))〗+9000s_t-26w_t ] 
+$Gen. Cost_d  = min⁡∑_t[∑_i(QC_i g_{i,t}^2+(LC_i + EF_i)g_{i,t} +NLC_i u_{i,t}+SUC_i v_{i,t})+9000s_t - 26w_y]$ 
 
 Generator Revenue  
-Revenue $= ∑_{t=1}^{168}(λ_t D_t)$  
+$Revenue = ∑_{t=1}^{168}(λ_t D_t)$  
 
 Total Profit  
-"Profit"= ∑_(t=1)^168▒〖λ_t D_t- ∑_(d=1)^7▒〖Gen.Cost〗_d 〗
+$Profit = ∑_{t=1}^{168}(λ_t D_t)- ∑_{d=1}^7Gen.Cost_d 〗$
 
