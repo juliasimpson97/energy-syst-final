@@ -27,7 +27,7 @@ Combination Policy Scenario
 〖〖Generator Cost〗_d= min〗⁡∑_t▒[∑_i▒〖〖(QC〗_i g_(i,t)^2+(〖LC〗_i+〖EF〗_i)g_(i,t)+〖NLC〗_i u_(i,t)+〖SUC〗_i v_(i,t))〗+9000s_t-26w_t ] 
 
 Generator Revenue
-"Revenue"= ∑_(t=1)^168▒〖λ_t D_t 〗
+"Revenue"= $∑_(t=1)^168(λ_t D_t )$
 Total Profit
 "Profit"= ∑_(t=1)^168▒〖λ_t D_t- ∑_(d=1)^7▒〖Gen.Cost〗_d 〗
 
